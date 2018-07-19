@@ -1,0 +1,82 @@
+.page__footer {
+  padding: 30px 0; 
+  text-align: center;
+}
+.callback__btn {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  padding: 8px 0;
+  border: none;
+  background-color: @redColor;
+  border-radius: 10px;
+  font-family: @bodyFontBold;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color .1s linear;
+  &:hover {
+    background-color: lighten(@redColor, 8%);
+  }
+}
+.phone__tel {
+  margin-bottom: 0;
+}
+.phone__timework {
+  margin-top: 0;
+}
+.footer__vk {
+  margin-right: 10px;
+  vertical-align: middle;
+  display: inline-block;
+  background-color: @blueColor;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  &:hover {
+    background-color: darken(@blueColor, 4%);
+  }
+  cursor: pointer;
+}
+.footer__vk-link {
+  font-weight: 700;
+  color: @blueColor;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+@media @tablet-widths { 
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__item-adress {
+    text-align: left;
+    order: 1;
+  }
+  .footer__item-logo {
+    order: 2;
+  }
+  .footer__item-phone {
+    text-align: left;    
+    order: 3;
+  }
+}
+@media @desktop-widths { 
+  .footer__wrapper {
+    width: 880px;
+    margin: 0 auto;
+  }
+}
+.agreement {
+  margin-top: 10px;
+}
+.agreement a {
+  color: @grayColor; 
+  &:hover{
+    text-decoration: none;
+  }
+}
