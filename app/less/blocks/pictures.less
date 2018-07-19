@@ -1,0 +1,122 @@
+.pictures {
+  padding-bottom: 30px;
+}
+.pictures__title {
+  font-family: @decorFont;
+  font-size: 34px;
+  text-align: center;
+  color: @blueColor;
+  font-weight: normal;
+}
+.picture__item {
+  margin: 0 auto;
+  padding-top: 48px;
+  position: relative;
+  width: 270px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    margin-left: -90px;
+    width: 180px;
+    height: 48px;
+    background-image: url(../img/decor_picture.png);
+    background-repeat: no-repeat;
+  }
+}
+
+.picture__wrapper {
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.28);
+  border: 7px solid #ffffff;
+  background-color: @goldColor;
+  transition: all 1000ms cubic-bezier(0.005, 1.650, 1.000, -0.600);
+  transition-timing-function: cubic-bezier(0.005, 1.650, 1.000, -0.600);
+  overflow: hidden;
+  &:hover .show-off {
+    top: 0px;
+    left: 0px;
+    transition: 1s;
+    transform: rotate(0deg);
+  }
+  &:hover{
+    box-shadow: none;
+  }
+}
+
+.show-off {
+  width: 500px;
+  height: 600px;
+  position: absolute;
+  top: -200px;
+  left: -600px;
+  transform: rotate(30deg);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0)50%, rgba(255, 255, 255, 0.7)100%);
+  pointer-events: none;
+}
+
+.picture__description {
+  box-sizing: border-box;
+  padding: 5px 10px 10px 10px;
+  background-color: @goldColor;
+  font-family: @bodyFontBold;
+  line-height: 14px;
+  height: 45px;
+  color: #000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.picture__img {
+  width: 100%;
+  height: auto;
+}
+
+.view__all {
+  text-align: center;
+}
+
+.view__all a {
+  font-family: @bodyFontBold;
+  font-size: 18px;
+  color: @redColor;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media @tablet-widths {
+  .pictures__wrapper {
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 0;
+      width: 49px;
+      height: 175px;
+      background-image: url(../img/decor_small_red.png);
+      background-repeat: no-repeat;
+      z-index: 999;
+    }
+  }
+  .pictures__title {
+    width: 100%;
+    font-size: 50px;
+  }
+  .pictures__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media @desktop-widths {
+  .picture__item {
+    margin: 0 20px;
+  }
+}
