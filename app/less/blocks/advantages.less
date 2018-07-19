@@ -1,0 +1,74 @@
+.advantages {
+  display: none;
+}
+
+@media @tablet-widths {
+  .advantages {
+    position: relative;
+    display: block;
+    padding: 40px 0;
+    background-color: #fff;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      margin-left: -369px;
+      width: 738px;
+      height: 30px;
+      background-image: url(../img/shadow.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }    
+  }
+  .advantages__title {
+    margin: 0;
+    font-family: @decorFont;
+    font-weight: normal;
+    font-size: 40px;    
+    color: @blueColor;
+    text-align: center;  
+    margin-bottom: 35px;
+  }
+  .advantages__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  .advantage__item {
+    width: 188px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .digit {
+    font-family: @bodyFontBold;
+    font-size: 87px;
+    line-height: 80px;
+    color: @redColor;   
+    margin-right: 10px;
+  }
+  .advantage__text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .advantage__text span{
+    font-family: @bodyFontBold;    
+    font-size: 23px;
+    color: @redColor; 
+    text-transform: uppercase;    
+  }
+  .from {
+    margin: 0;
+    font-family: @bodyFontBold;    
+    font-size: 23px;
+    color: @redColor; 
+  }
+}
+@media @desktop-widths {
+  .advantages {
+    padding-bottom: 100px;
+  }  
+}
+
+
+
