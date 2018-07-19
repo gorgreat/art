@@ -1,0 +1,190 @@
+.mobile__nav {
+  background-color: @redColor;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 15px;
+}
+
+.vk-mobile,
+.vk {
+  background-color: @blueColor;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  &:hover {
+    background-color: darken(@blueColor, 4%);
+  }
+  cursor: pointer;
+}
+
+.toogle__nav {
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-image: url(../img/menu.svg);
+  background-repeat: no-repeat;
+}
+
+.mobile__items {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: darken(@redColor, 4%);
+}
+
+.mobile__item {
+  text-align: center;
+}
+
+.mobile__item a {
+  padding: 8px 0;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color .1s linear;
+  &:hover {
+    background-color: darken(@redColor, 8%);
+  }
+}
+
+.header__wrapper {
+  padding: 15px 0;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+.contact {
+  text-align: center;
+}
+
+.phone {
+  margin: 0;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 100;
+}
+
+.phone span {
+  font-family: @bodyFontBold;
+}
+
+.phone a {
+  color: @blueColor;
+  text-decoration: none;
+  &:hover {
+    color: darken(@blueColor, 8%);
+  }
+}
+
+.timework {
+  margin: 0;
+  text-align: center;
+  color: #000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.callback {
+  width: 170px;
+  margin: 0 auto;
+  background: none;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 18px;
+  color: @redColor;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: darken(@redColor, 8%);
+  }
+}
+
+.main-nav {
+  display: none;
+}
+
+.vk {
+  display: none;
+}
+
+@media @tablet-widths {
+  .mobile__nav {
+    display: none;
+  }
+  .header__wrapper {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between
+  }
+  .logo {
+    position: absolute;
+    width: 272px;
+    height: auto;
+  }
+  .main-nav {
+    margin-left: 300px;
+    display: block;
+  }
+  .nav__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .nav__item {
+    margin-bottom: 5px;
+  }
+  .nav__items a {
+    font-family: @bodyFontBold;
+    text-transform: uppercase;
+    color: @redColor;
+    transition: color .1s linear;
+    &:hover {
+      color: darken(@redColor, 8%);
+      text-decoration: none;
+    }
+  }
+  .first-screen {
+    background-color: #fff;
+  }
+  .vk {
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .timework {
+    text-align: right;
+  }
+  .callback {
+    float: right;
+  }
+}
+
+@media @desktop-widths {
+  .logo {
+    top: 10px;
+  }
+  .header__wrapper {
+    align-items: center;
+  }
+  .nav__items {
+    display: flex;  
+    z-index: 999;
+  }
+  .nav__items a {
+    font-size: 18px;
+  }
+  .nav__item {
+    margin-right: 20px;
+  }
+}
