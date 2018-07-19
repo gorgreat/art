@@ -1,0 +1,208 @@
+.features {
+  position: relative;
+  padding: 30px 0;
+  background-image: url(../img/features__bg.png);
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -160px;
+    width: 320px;
+    height: 30px;
+    background-image: url(../img/shadow_small.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media @medium-mobile-widths {
+  .features {
+    &:after {
+      background-image: url(../img/shadow_xsmall.png);
+      width: 480px;
+      margin-left: -240px;
+      background-image: url(../img/shadow_xsmall.png);
+    }
+  }
+}
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-family: @decorFont;
+  font-size: 38px;
+  line-height: 38px;
+  color: @redColor;
+  text-align: center;
+  font-weight: normal;
+}
+
+.features__girl {
+  display: none;
+}
+
+.features__items {
+  width: 290px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.features__item {
+  position: relative;
+  margin-left: 40px;
+  font-family: @bodyFontBold;
+  color: @blueColor;
+  font-size: 17px;
+  margin-bottom: 30px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -32px;
+    width: 27px;
+    height: 28px;
+    background-image: url(../img/check.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.features___btn {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  background-color: @redColor;
+  border-radius: 10px;
+  font-family: @bodyFontBold;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color .1s linear;
+  &:hover {
+    background-color: lighten(@redColor, 8%);
+  }
+}
+
+@media @tablet-widths {
+  .features {
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      margin-left: -369px;
+      width: 738px;
+      height: 30px;
+      background-image: url(../img/shadow.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  .features__title {
+    width: 600px;
+    margin: 0 auto;
+    font-size: 44px;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+  .features__wrapper {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -48px;
+      left: 10px;
+      width: 42px;
+      height: 226px;
+      background-image: url(../img/decor_gold.png);
+      background-repeat: no-repeat;
+      z-index: 999;
+    }
+  }
+  .features__items {
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .features__item {
+    margin-left: 60px;
+    font-family: @bodyFont;
+    font-size: 30px;
+    &:before {
+      left: -50px;
+      width: 47px;
+      height: 46px;
+    }
+  }
+  .features___btn {
+    display: block;
+    width: 460px;
+    margin: 0 auto;
+  }
+}
+
+@media @medium-desktop-widths {
+  .features__title {
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-size: 50px;
+  }
+}
+
+@media @desktop-widths {
+  .features {
+    padding: 60px 0;
+    text-align: center;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -32px;
+      left: 50%;
+      margin-left: -495px;
+      width: 990px;
+      height: 34px;
+      background-image: url(../img/shadow.png);
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      z-index: 999;
+    }
+  }
+  .features__title {
+    padding-right: 30px;
+    margin-bottom: 40px;
+  }
+  .features__items {
+    text-align: left;
+    padding-right: 30px;
+    margin-bottom: 40px;
+  }
+  .features__girl {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -102px;
+    width: 303px;
+    height: 613px;
+    background-image: url(../img/girl.png);
+    background-repeat: no-repeat;
+  }
+  .features___btn {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  .features__wrapper {
+    &:before {
+      left: 100px;
+      width: 42px;
+      height: 226px;
+      background-image: url(../img/decor_gold.png);
+      background-repeat: no-repeat;
+      z-index: 999;
+    }
+  }
+}
